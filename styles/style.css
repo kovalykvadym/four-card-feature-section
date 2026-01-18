@@ -399,7 +399,7 @@ main {
   font-weight: 600;
 }
 .cards__text {
-  font-size: 13px;
+  font-size: clamp(12px, 0.9vw, 13px);
   line-height: 1.85;
   font-weight: 400;
 }
