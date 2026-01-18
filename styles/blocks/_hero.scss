@@ -1,0 +1,41 @@
+.hero {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 72px;
+    max-width: 1115px;
+
+    @include tablet {
+      row-gap: 66px;
+    }
+
+    @include mobile {
+      row-gap: 60px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 505px;
+    text-align: center;
+    row-gap: 22px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 32px;
+
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

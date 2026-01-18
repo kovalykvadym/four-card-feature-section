@@ -1,0 +1,24 @@
+.header {
+  &__titles {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    @include mobile {
+      row-gap: 8px;
+    }
+  }
+
+  &__title {
+    font-weight: 200;
+
+    &-bold {
+      font-weight: 600;
+      color: var(--color-grey-500);
+    }
+  }
+
+  &__text {
+
+  }
+}

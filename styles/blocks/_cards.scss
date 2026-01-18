@@ -1,0 +1,70 @@
+$colors: (
+  cyan: var(--color-cyan),
+  red: var(--color-red),
+  orange: var(--color-orange),
+  blue: var(--color-blue)
+);
+
+.cards {
+  &__item {
+    display: grid;
+    row-gap: 32px;
+    padding: 32px;
+    background-color: var(--color-white-100);
+    box-shadow: 0 15px 30px -10px rgba(72, 99, 145, 0.15);
+    max-width: 350px;
+
+    @each $name, $color in $colors {
+      &-#{$name} {
+        border-top: 4px solid $color;
+        border-radius: 8px;
+      }
+    }
+
+    &-supervisor {
+      grid-row: span 2 / span 2;
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+
+    &-team-builder {
+      grid-row: span 2 / span 2;
+      grid-column-start: 2;
+      grid-row-start: 1;
+    }
+
+    &-karma {
+      grid-row: span 2 / span 2;
+      grid-column-start: 2;
+      grid-row-start: 3;
+    }
+
+    &-calculator {
+      grid-row: span 2 / span 2;
+      grid-column-start: 3;
+      grid-row-start: 2;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: 13px;
+    line-height: 1.85;
+    font-weight: 400;
+  }
+
+  &__image {
+    justify-self: end;
+  }
+}
